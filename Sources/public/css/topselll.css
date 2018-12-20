@@ -1,0 +1,105 @@
+.topsell{
+    position: relative;
+    width: 90%;
+    margin: 20px auto auto;
+    height: auto;
+    display: grid;
+    grid-gap: 10px 40px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: auto 1fr auto;
+}
+.topsell .card{
+    border-radius: 5px;
+    position: relative;
+    background: #cccccc;
+    overflow: hidden;
+}
+.topsell .card .box-img{
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+.topsell .card:hover .box-img{
+    opacity: 0.2;
+}
+.topsell .card .box-img img{width: 100%}
+.topsell .card .card-nd{
+    position: absolute;
+    width: 100%;
+    height: 45%;
+    bottom: -100%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px;
+    transition: 0.5s;
+}
+.topsell .card.nenv .card-nd{
+    background:linear-gradient(0deg,yellow,transparent);
+}
+.topsell .card.nenx .card-nd{
+    background:linear-gradient(0deg,blue,transparent);
+}
+.topsell .card.nenh .card-nd{
+    background:linear-gradient(0deg,violet,transparent);
+}
+.topsell .card.nenl .card-nd{
+    background:linear-gradient(0deg,greenyellow,transparent);
+}
+.topsell .card.nenc .card-nd{
+    background:linear-gradient(0deg,orange,transparent);
+}
+.topsell .card.nendt .card-nd{
+    background:linear-gradient(0deg,deepskyblue,transparent);
+}
+.topsell .card:hover .card-nd{
+    bottom: 0;
+}
+.webname{
+    color: navy;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0px 10px;
+    padding: 0px;
+    text-transform: uppercase;
+}
+.card ul li{list-style: none}
+.card-nd p{color: blue; font-weight: bold}
+.card-nd span{color: deepskyblue; font-weight: bold; }
+.card-nd strong{color: orangered; font-size: 16px}
+.fa-react{
+    color: white;
+    font-size: 18px;
+    padding: 4px;
+    transition: 0.5s;
+}
+.buy .fa-shopping-cart{
+    color: white;
+    font-size: 18px;
+    padding: 4px;
+    transition: 0.5s;
+
+}
+.card-nd a{
+    border:unset;
+    border-radius: 3px;
+    padding: 7px 10px;
+    margin: 0px 10px;
+}
+.dm{background:dodgerblue;color: white}
+.buy{background:limegreen; color: white}
+a.dm,.buy{color: white; font-weight: bold}
+.btn-db a{text-decoration: none; transition: 0.8s; font-size: 16px}
+.btn-db a:hover{color: white; font-size: 18px; cursor: pointer}
+.btn-db{margin: 35px 0px 0px}
+.btn-db a:hover .fa-newspaper, .fa-react{font-size: 20px;}
+.btn-db a:not([href]):not([tabindex]) {
+    color: white;
+}
+
+
+
+
+
+

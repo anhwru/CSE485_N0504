@@ -1,0 +1,459 @@
+
+
+/* Float Elements
+---------------------------------*/
+.fl-lt {float:left;}
+.fl-rt {float:right;}
+
+/* Clear Floated Elements
+---------------------------------*/
+.clear {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: '\0020';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.figure{ margin:0px;}
+
+img{ max-width:100%;}
+
+a, a:hover, a:active{ outline:0px !important}
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/fontawesome-webfont.eot?v=4.1.0');
+    src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.1.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff?v=4.1.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.1.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Primary Styles
+---------------------------------*/
+body {
+    overflow: initial;
+    background:#fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size:14px;
+    font-weight:normal;
+    color:#888888;
+    margin:0;
+}
+h2{
+    font-size:34px;
+    color:#222222;
+    font-family: 'Montserrat', sans-serif;
+    font-weight:700;
+    letter-spacing: -1px;
+    margin:0 0 15px 0;
+    text-align:center;
+    text-transform:uppercase;
+}
+h3{
+    font-family: 'Montserrat', sans-serif;
+    color:#222222;
+    font-size:16px;
+    margin:0 0 5px 0;
+    text-transform:uppercase;
+    font-weight:400;
+}
+h6{
+    font-size:16px;
+    color:#888888;
+    font-family: 'Open Sans', sans-serif;
+    font-weight:400;
+    text-align:center;
+    margin: -10px 0 60px 0;
+}
+p{
+    line-height:24px;
+    margin:0;
+}
+
+
+.header h1{
+    font-family: 'Montserrat',sans-serif;
+    font-size:50px;
+    font-weight:400;
+    letter-spacing: -1px;
+    margin:0 0 22px 0 ;
+    color:#fff;
+}
+
+
+.link{
+    padding:15px 35px;
+    background:#7cc576;
+    color:#fff !important;
+    font-size:16px;
+    font-weight:400;
+    font-family: 'Montserrat', sans-serif;
+    display:inline-block;
+    border-radius:3px;
+    text-transform:uppercase;
+    line-height:25px;
+    margin-bottom:20px;
+    transition:all 0.3s ease-in-out;
+    -moz-transition:all 0.3s ease-in-out;
+    -webkit-transition:all 0.3s ease-in-out;
+}
+.link:hover {
+    text-decoration:none;
+    color:#7cc576 !important;
+    background:#fff;
+}
+
+.link:active, .link:focus {
+    background: #7cc576;
+    text-decoration:none;
+    color:#fff !important;
+}
+
+/* Navigation
+---------------------------------*/
+.main-nav-outer{
+    padding:0px;
+    border-bottom:1px solid #dddddd;
+    box-shadow:0 4px 5px -3px #ececec;
+    position:relative;
+    background:#fff;
+}
+.main-nav{
+    text-align:center;
+    padding:0;
+    list-style:none;
+}
+
+/* Float Elements
+---------------------------------*/
+.fl-lt {float:left;}
+.fl-rt {float:right;}
+
+/* Clear Floated Elements
+---------------------------------*/
+.clear {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: '\0020';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.figure{ margin:0px;}
+
+img{ max-width:100%;}
+
+a, a:hover, a:active{ outline:0px !important}
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/fontawesome-webfont.eot?v=4.1.0');
+    src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.1.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff?v=4.1.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.1.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.link{
+    padding:15px 35px;
+    background:#7cc576;
+    color:#fff !important;
+    font-size:16px;
+    font-weight:400;
+    font-family: 'Montserrat', sans-serif;
+    display:inline-block;
+    border-radius:3px;
+    text-transform:uppercase;
+    line-height:25px;
+    margin-bottom:20px;
+    transition:all 0.3s ease-in-out;
+    -moz-transition:all 0.3s ease-in-out;
+    -webkit-transition:all 0.3s ease-in-out;
+}
+.link:hover {
+    text-decoration:none;
+    color:#7cc576 !important;
+    background:#fff;
+}
+
+.link:active, .link:focus {
+    background: #7cc576;
+    text-decoration:none;
+    color:#fff !important;
+}
+
+/* Navigation
+---------------------------------*/
+.main-nav-outer{
+    padding: 1px 0px 1px 0px;
+    border-bottom:1px solid #dddddd;
+    box-shadow:0 4px 5px -3px #ececec;
+    position:relative;
+    background:#fff;
+}
+.main-nav{
+    text-align:center;
+    padding:0;
+    list-style:none;
+}
+.main-nav li{
+    display:inline;
+    margin:0 1px;
+}
+.main-nav li a{
+    display:inline-block;
+    color:#222222;
+    text-transform:uppercase;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    line-height:20px;
+    margin:17px 32px;
+    transition:all 0.3s ease-in-out;
+    -moz-transition:all 0.3s ease-in-out;
+    -webkit-transition:all 0.3s ease-in-out;
+}
+.main-nav li a:hover{
+    text-decoration:none;
+    color: #7cc576;
+}
+nav ul{margin-bottom: 0}
+
+.small-logo{
+    padding:0 32px;
+}
+.main-nav img {
+    height: 60px;
+    width: auto;
+}
+.res-nav_click {
+    line-height:38px;
+    font-family: 'FontAwesome';
+    font-size:38px;
+    text-decoration: none !important;
+    color:#777777;
+    font-style:normal;
+    display:none;
+    width:42px;
+    height:27px;
+    margin:20px auto;
+    transition:all 0.3s ease-in-out;
+    -moz-transition:all 0.3s ease-in-out;
+    -webkit-transition:all 0.3s ease-in-out;
+}
+
+.res-nav_click:hover, .res-nav_click:active, .res-nav_click:focus {
+    color: #7cc576 !important;
+    text-shadow: 0 0 3px blueviolet, 0 0 1px deepskyblue;
+    cursor: pointer;
+}
+
+.progress-container{
+    width: 100%;
+    height: 5px;
+    background:#f3f3f3;
+    left: 0;
+    top: 0;
+    right: 0;
+    position: fixed;
+    z-index:99999999;
+}
+.progress-bars{
+    height: 5px;
+    background:dodgerblue;
+    width:0%;
+    border-radius: 2px;
+}
+
+
+.mylogo {
+    margin: 8px 0px 4px 20px;
+    height: 60px;
+    width: 52px;
+    background-image: url(../img/react2.png);
+    background-size: contain;
+    float: left;
+}
+@media only screen and(min-width: 767px){
+    .mylogo{display: none}
+}
+.mylogo:hover{filter: drop-shadow(0 0 9px blue);}
+li.small-logo:hover {
+    filter: drop-shadow(0 0 9px blue);
+}
+@media only screen and (max-width: 765px){
+    .mylogo{display: block}
+}
+@media only screen and (min-width: 766px){
+    .mylogo{display: none}
+}
+
+.main-nav li{
+    display:inline;
+    margin:0 1px;
+}
+.main-nav li a{
+    display:inline-block;
+    color:#222222;
+    text-transform:uppercase;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    line-height:20px;
+    margin:17px 32px;
+    transition:all 0.3s ease-in-out;
+    -moz-transition:all 0.3s ease-in-out;
+    -webkit-transition:all 0.3s ease-in-out;
+}
+
+
+nav ul{margin-bottom: 0}
+
+.small-logo{
+    padding: 0 0px 0px 15px;
+}
+
+.main-section{
+    padding:90px 0 110px;
+}
+
+.main-nav img {
+    height: 60px;
+    width: auto;
+}
+.res-nav_click {
+    line-height:38px;
+    font-family: 'FontAwesome';
+    font-size:38px;
+    text-decoration: none !important;
+    color:#777777;
+    font-style:normal;
+    display:none;
+    width:42px;
+    height:27px;
+    margin:20px auto;
+    transition:all 0.3s ease-in-out;
+    -moz-transition:all 0.3s ease-in-out;
+    -webkit-transition:all 0.3s ease-in-out;
+}
+
+.res-nav_click:hover, .res-nav_click:active, .res-nav_click:focus {
+    color: deepskyblue !important;
+}
+
+.portfolioContainer{
+    max-width: 1140px;
+}
+
+
+
+
+.mylogo {
+    margin: 8px 0px 4px 20px;
+    height: 60px;
+    width: 52px;
+    background-image: url(../img/react2.png);
+    background-size: contain;
+    float: left;}
+@media only screen and(min-width: 767px){
+    .mylogo{display: none}
+}
+.mylogo:hover{filter: drop-shadow(0 0 9px blue);}
+li.small-logo:hover {
+    filter: drop-shadow(0 0 9px blue);
+}
+@media only screen and (max-width: 765px){
+    .mylogo{display: block}
+}
+@media only screen and (min-width: 766px){
+    .mylogo{display: none}
+}
+
+.main-nav li a:hover{
+    text-decoration:none;
+    color: deepskyblue;
+    text-shadow: 0 0 3px blueviolet, 0 0 1px deepskyblue;
+}
+.main-nav li a{
+    font-weight: 800;
+    display:inline-block;
+    color:#222222;
+    text-transform:uppercase;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    line-height:10px;
+    margin: 15px 24px 16px 25px;
+    transition:all 0.3s ease-in-out;
+    -moz-transition:all 0.3s ease-in-out;
+    -webkit-transition:all 0.3s ease-in-out;
+}
+@media only screen and (max-width: 767px) {
+    .main-nav li a {
+        display: block;
+        padding: 12px 32px;
+        margin: 4px 0;
+        border-bottom: 1px solid #f3f3f3;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .main-nav li a {
+        display: block;
+        padding: 12px 32px;
+        margin: 4px 0;
+        border-bottom: 1px solid #f3f3f3;
+    }
+}
+.main-nav li a {
+    font-weight: 800;
+    display: inline-block;
+    color: #222222;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    line-height: 10px;
+    margin: 15px 25px 15px 70px;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+a.res-nav_click {
+    margin-left: 90%;
+    color: deepskyblue;
+}
+@media only screen and (max-width: 767px){
+    a.res-nav_click{display: block}
+}
+@media only screen and (max-width: 767px){
+    .main-nav li a{
+        margin: 15px 45px 15px 80px;
+    }
+}

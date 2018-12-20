@@ -1,0 +1,71 @@
+.featurette-divider {
+    margin: 5rem 0;
+}
+
+
+.featurette-heading {
+    font-family: initial;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: -.05rem;
+    color: deepskyblue;
+}
+
+
+
+@media (min-width: 40em) {
+    .carousel-caption p {
+        margin-bottom: 1.25rem;
+        font-size: 1.25rem;
+        line-height: 1.4;
+    }
+
+    .featurette-heading {
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 62em) {
+    .featurette-heading {
+        margin-top: 7rem;
+    }
+}
+.skewed{
+    background: paleturquoise;
+    padding: 60px 0px;
+    transform: skew(0deg,-10deg) translateY(-120px);
+}
+section .skew1{
+    padding: 75px 50px 20px;
+    transform: skew(0deg,10deg)
+}
+.skewed2{
+    margin: 20px 0px;
+    background: lavender;
+    padding: 60px 0px;
+    transform: skew(0deg,-10deg) translateY(-120px);
+}
+.skewed3{
+    margin: 20px 0px;
+    background:antiquewhite;
+    padding: 60px 0px;
+    transform: skew(0deg,-10deg) translateY(-120px);
+}
+section .skew2{
+    padding: 0px 50px 0px;
+    transform: skew(0deg,10deg)
+}
+section .skew3{
+    padding: 0px 50px 10px ;
+    transform: skew(0deg,10deg)
+}
+.img-middle{
+    padding: 20% 0 0 0;
+}
+.img-bottom{
+    padding: 20% 0 0 0;
+}
+.col-md-7 p{
+    font-size: 15px;
+    color: dodgerblue;
+}
