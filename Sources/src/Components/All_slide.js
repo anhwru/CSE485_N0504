@@ -2,16 +2,7 @@ import React, {Component} from 'react';
 import MiniSlide from "./Mini_Slide";
 
 class AllSlide extends Component {
-    constructor(props){
-        super(props);
-        this.state={
-            slimg : [
-                {slimg: '../img/SEO2.jpeg',
 
-                    },
-        ]
-        }
-    }
     render() {
 
         var Slider_1 = '../img/SEO2.jpeg';

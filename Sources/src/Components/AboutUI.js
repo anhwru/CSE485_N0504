@@ -4,57 +4,45 @@ import React, {Component} from 'react';
 class AboutUi extends Component {
     render() {
         return (
-            <div className="container">
+            <div className="container" data-aos="fade-up">
                 <div className="row">
                     <div className="col-md-12">
-                        <div className="main-timeline7">
+                        <div className="main-timeline3">
                             <div className="timeline">
-                                <div className="timeline-icon"><i className="fa fa-globe"></i></div>
-                                <span className="year">2018</span>
-                                <div className="timeline-content">
-                                    <h5 className="title">Responsive</h5>
+                                <a href="#" className="timeline-content">
+                                    <span className="year">Cheap</span>
+                                    <h3 className="title">Giá cả hấp dẫn</h3>
                                     <p className="description">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mattis felis
-                                        vitae risus pulvinar tincidunt. Nam ac venenatis enim. Aenean hendrerit justo
-                                        sed.
+                                        Chúng tôi cam kết rằng những mẫu giao diện của chúng tôi có mức giá ưu đãi nhất trên thị trường hiện nay!
                                     </p>
-                                </div>
+                                </a>
                             </div>
                             <div className="timeline">
-                                <div className="timeline-icon"><i className="fa fa-rocket"></i></div>
-                                <span className="year">2018</span>
-                                <div className="timeline-content">
-                                    <h5 className="title">Đa dạng thể loại</h5>
+                                <a href="#" className="timeline-content">
+                                    <span className="year">Response</span>
+                                    <h3 className="title">Tương thích mọi thiết bị</h3>
                                     <p className="description">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mattis felis
-                                        vitae risus pulvinar tincidunt. Nam ac venenatis enim. Aenean hendrerit justo
-                                        sed.
+                                        Tất cả trang web đều dược thiết kế để cho mọi loại thiết bị có thể sử dụng dễ dàng mà vẫn giữ được bố cục
                                     </p>
-                                </div>
+                                </a>
                             </div>
                             <div className="timeline">
-                                <div className="timeline-icon"><i className="fa fa-briefcase"></i></div>
-                                <span className="year">2018 </span>
-                                <div className="timeline-content">
-                                    <h5 className="title">Giá cả hấp dẫn</h5>
+                                <a href="#" className="timeline-content">
+                                    <span className="year">Beautiful</span>
+                                    <h3 className="title">Thiết kế bắt mắt</h3>
                                     <p className="description">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mattis felis
-                                        vitae risus pulvinar tincidunt. Nam ac venenatis enim. Aenean hendrerit justo
-                                        sed.
+                                        Những template được thiết kế theo xu hưóng mới nhất trên thế giới, dảm bảo người dùng sẽ ấn tượng từ lần sử dụng đầu tiên
                                     </p>
-                                </div>
+                                </a>
                             </div>
                             <div className="timeline">
-                                <div className="timeline-icon"><i className="fa fa-mobile"></i></div>
-                                <span className="year">2018</span>
-                                <div className="timeline-content">
-                                    <h5 className="title">Giao diện bắt mắt</h5>
+                                <a href="#" className="timeline-content">
+                                    <span className="year">Support</span>
+                                    <h3 className="title">Hỗ trợ đến hết</h3>
                                     <p className="description">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mattis felis
-                                        vitae risus pulvinar tincidunt. Nam ac venenatis enim. Aenean hendrerit justo
-                                        sed.
+                                        Chúng tôi đảm bảo hỗ trợ việc cài đặt và sử dụng của khách hàng cho đến khi trang được sử dụng chính thức.
                                     </p>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>

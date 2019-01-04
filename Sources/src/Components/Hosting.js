@@ -4,7 +4,15 @@ import {
 
 } from 'react-router-dom'
 class Hosting extends Component {
+    constructor(props){
+        super(props)
+    }
+
+    sendId(){
+        this.props.handleClick()
+    }
     render() {
+
         return (
             <div className="col-sm-4">
                 <div className="card text-center cardhost">
@@ -24,7 +32,7 @@ class Hosting extends Component {
                             <li><i className={"fas "+ this.props.hotro} /> Live Support</li>
                         </ul>
                     </div>
-                    <Link to="/clientinfo">Buy</Link>
+                    <Link to="/pay" onClick={this.sendId.bind(this)}>Buy</Link>
                 </div>
             </div>
         );

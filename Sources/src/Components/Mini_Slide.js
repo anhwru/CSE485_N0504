@@ -16,7 +16,7 @@ class MiniSlide extends Component {
                         <small className={this.props.smalltt}>{this.props.slidetitle} </small>
                         <div className={"decoration "+this.props.dc }/>
                         <p>{this.props.slidecontent}</p>
-                        <a className={"more "+this.props.slidemore} href="true">See more... <i className="fas fa-caret-down" /></a>
+                        {/*<a className={"more "+this.props.slidemore} href="true">See more... <i className="fas fa-caret-down" /></a>*/}
                     </div>
                 </div>
             </li>

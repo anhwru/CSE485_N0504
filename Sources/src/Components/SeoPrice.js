@@ -6,6 +6,13 @@ import {
 
 
 class SeoPrice extends Component {
+    constructor(props){
+        super(props)
+    }
+
+    sendId(){
+        this.props.handleClick()
+    }
     render() {
         return (
             <div className="col-sm-4">
@@ -23,7 +30,7 @@ class SeoPrice extends Component {
                             <li><i className="fas fa-briefcase-medical"/> Bảo hành : <span>{this.props.tg}</span></li>
                         </ul>
                     </div>
-                    <Link to="/clientinfo">Đặt</Link>
+                    <Link to="/pay"onClick={this.sendId.bind(this)}>Đặt</Link>
                 </div>
             </div>
         );

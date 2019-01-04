@@ -1,39 +1,61 @@
 import React, {Component} from 'react';
 import Hosting from "./Hosting";
 import axios from "axios";
-
+// const  getHostdata = () =>{
+//         return axios.get('http://localhost:3001')
+//             .then((res) => res.data)
+// };
 class Hostings extends Component {
+
     constructor(props){
-        super(props)
+        super(props);
         this.state = {
-            data:[]
+            data: []
         }
     }
+    // lấy dữ liệu khi click vào dịch vụ
+    sendId(id) {
+        localStorage.setItem('id', id);
+        var data = localStorage.getItem('id');
+        var splitted = data.split(" ", 2);
+        for(var i=0; i< splitted.length; i++){
+            // console.log(splitted[0]+ splitted[1])
+        };
+        var tengoi = splitted[0];
+        var gia = splitted[1];
+        localStorage.setItem('ten',tengoi);
+        localStorage.setItem('gia',gia);
+        // console.log(localStorage)
 
+    }
+    // lấy dữ liệu từ datahost
     componentDidMount() {
-        axios.get('http://localhost:3001').then(res =>{
+        axios.get('http://localhost:3001/datahost').then(res =>{
             this.setState({
                 data:res.data
             });
-            console.log(this.state)
+            // console.log(this.state)
         });
     }
+
+
     render() {
         return (
+
             <div className="container-fluid" data-aos="flip-right">
                 <div className="container">
                     <div className="row">
                         {
-                            this.state.data.map((e,i)=>{
-                                return(
-                                    <Hosting key={i} icongoi="fa-paper-plane" tengoi="Basic" giahost="59000" bt="15GB" db="1" email="5" uptime="90%" hotro="fa-times-circle"/>
-                                )
+                            this.state.data.map((value,key) => {
+                                if (key<3){
+                                    return(
+                                        <Hosting key={key} icongoi={value.iconhost} tengoi={value.tengoi} giahost={value.giahost} bt={value.bt} db={value.db} email={value.email} uptime={value.uptime} hotro={value.hotro} handleClick={this.sendId.bind(this,value.tengoi+" "+value.giahost)}/>
+                                    )
+                                }
+
                             })
                         }
 
-
-                        {/*<Hosting icongoi="fa-rocket" tengoi="Pro" giahost="359000" bt="Không giới hạn" db="Không giới hạn" email="Không giới hạn" uptime="99%" hotro="fa-check-circle"/>*/}
-                        {/*<Hosting icongoi="fa-plane-departure" tengoi="Medium" giahost="159000" bt="Không giới hạn" db="3" email="20" uptime="99%" hotro="fa-check-circle"/>*/}
                     </div>
                 </div>
             </div>

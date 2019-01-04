@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import  axios from 'axios';
 import {
 
     Link,
@@ -14,9 +13,9 @@ class Menu extends Component {
                         <li><Link to="/seo">Seo</Link></li>
                         <li><Link to="/hosting">Hosting</Link></li>
                         <li className="small-logo"><a><img src="../img/react2.png" alt="logo"/></a></li>
-                        <li><Link to="/interface">Interface</Link></li>
+                        <li><Link to="/template">Template</Link></li>
                         <li><Link to="/about">About</Link></li>
-                        <li><Link to="/client">Client</Link></li>
+                        <li><Link to="/invoice">Invoice</Link></li>
                     </ul>
                     <a className="mylogo"/>
                     <a className="res-nav_click"><i className="fa fa-bars"/></a>

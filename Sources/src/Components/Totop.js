@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-
 class Totop extends Component {
     render() {
         return (

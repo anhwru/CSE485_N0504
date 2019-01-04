@@ -2,6 +2,13 @@ import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 
 class Topsell extends Component {
+    constructor(props){
+        super(props)
+    }
+
+    sendId(){
+        this.props.handleClick()
+    }
     render() {
         return (
             <div>
@@ -14,8 +21,8 @@ class Topsell extends Component {
                         <p> {this.props.motaweb} </p>
                         <strong>Giá: </strong><span>{this.props.giaweb}</span>
                         <div className="btn-db">
-                            <a className="dm"><i className="fab fa-react"></i>Demo</a>
-                            <Link to="/clientinfo"><a className="buy"><i className="fas fa-shopping-cart" />Mua</a></Link>
+                            <a className="dm" href={this.props.demo} target="_blank"><i className="fab fa-react"></i>Demo</a>
+                            <Link to="/pay"><a className="buy" onClick={this.sendId.bind(this)}><i className="fas fa-shopping-cart" />Mua</a></Link>
                         </div>
                     </div>
                 </div>

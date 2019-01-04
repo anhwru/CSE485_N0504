@@ -4,7 +4,7 @@ import {
 
 } from 'react-router-dom'
 import Menu from "./Components/Menu";
-import Progress_bar from "./Components/Progress_bar";
+import Progressbar from "./Components/Progressbar";
 import Totop from "./Components/Totop";
 import Footer from "./Components/Footer";
 import Url from "./Router/Url";
@@ -17,7 +17,7 @@ class App extends Component {
     return (
         <Router>
             <div>
-                <Progress_bar/>
+                <Progressbar/>
                 <Totop/>
                 <Menu/>
                 <Url/>

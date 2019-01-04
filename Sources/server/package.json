@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
   "keywords": [
     "anhnv625"
@@ -12,9 +12,17 @@
   "author": "anhnv",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "chance": "^1.0.18",
     "cors": "^2.8.5",
+    "ejs": "^2.6.1",
     "express": "^4.16.4",
-    "mysql": "^2.16.0"
+    "express-handlebars": "^3.0.0",
+    "moment": "^2.23.0",
+    "mysql": "^2.16.0",
+    "nodemailer": "^4.7.0",
+    "nodemailer-express-handlebars": "^3.0.0",
+    "nodemon": "^1.18.9"
   },
   "devDependencies": {},
   "description": ""

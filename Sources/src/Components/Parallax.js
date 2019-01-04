@@ -6,8 +6,8 @@ class Parallax extends Component {
            <section>
                <div className="sec1">
                    <h2> " Luôn mang lại cho bạn những gì tốt đẹp nhất "</h2>
-                   <img src="img/pr3.png" className="para1" />
-                   <img src="img/pr4.png" className="para2" />
+                   <img src="img/pr3.png" className="para1" atl="para"/>
+                   <img src="img/pr4.png" className="para2"  atl="para"/>
                </div>
            </section>
         );

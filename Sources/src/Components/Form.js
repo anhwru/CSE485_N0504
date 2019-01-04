@@ -1,136 +1,85 @@
-import React, { Component } from 'react';
-import Form from 'react-validation/build/form';
-import Input from 'react-validation/build/input';
-import CheckButton from 'react-validation/build/button';
-import { isEmail, isEmpty } from 'validator';
-// import Cards from 'react-credit-cards';
-import PhoneInput, { formatPhoneNumber, isValidPhoneNumber } from 'react-phone-number-input'
-import 'react-phone-number-input/style.css'
-// import { formatPhoneNumber } from 'react-phone-number-input'
+import React from 'react';
+import { Formik, Form, Field } from 'formik';
+import * as Yup from 'yup';
+import axios from "axios";
+import {
+    BrowserRouter as Router,
+    Route,
+    Link,
+    Redirect,
+    withRouter
+} from "react-router-dom";
+import Host from "./Host";
+
+const SignupSchema = Yup.object().shape({
+    fullname: Yup.string()
+        .min(5, 'Vui lòng nhập tên thật!')
+        .max(30, 'Vui nhập lại đúng tên!')
+        .required('Đây là trường bắt buộc!'),
+    address: Yup.string()
+        .min(20, 'Vui lòng nhập địa chỉ cụ thể hơn!')
+        .max(80, 'Đây không phải một địa chỉ hợp lệ!')
+        .required('Đây là trường bắt buộc!'),
+    phonenumber: Yup.number().required('Phone number is required!').integer().positive(),
+    cre: Yup.number().required('Đây là trường bắt buộc !').integer().positive(),
+    email: Yup.string()
+        .email('Invalid email')
+        .required('Đây là trường bắt buộc!'),
+});
 
 
-const minname = (value) => {
-    if (value.trim().length < 3) {
-        return <small className="form-text text-danger">Tên của bạn không hợp lệ!</small>;
-    }
-};
-const maxname = (value) => {
-    if (value.trim().length >40) {
-        return <small className="form-text text-danger">Tên của bạn không hợp lệ!</small>;
-    }
-};
-const required = (value) => {
-    if (isEmpty(value)) {
-        return <small className="form-text text-danger">Đây là trường bắt buộc!</small>;
-    }
-};
+const Myform = () => (
 
-const email = (value) => {
-    if (!isEmail(value)) {
-        return <small className="form-text text-danger">Bạn nhập không đúng định dạng!</small>;
-    }
-};
+    <div>
+        <h3 className="text-center"> Vui lòng điền đầy đủ thông tin vào các trường sau </h3>
+        <Formik
+            initialValues={{
+                fullname: '',
+                address: '',
+                phonenumber: '',
+                email: '',
+                cre : '',
+            }}
+            validationSchema={SignupSchema}
 
-const minaddress = (value) => {
-    if (value.trim().length < 30) {
-        return <small className="form-text text-danger">Vui lòng mô tả địa chỉ chi tiết hơn</small>;
-    }
-};
+            onSubmit={(values, { setSubmitting }) => {
 
-const minvalue = (value) => {
-    if (value.trim().length < 12) {
-        return <small className="form-text text-danger">Bạn nhập thiếu số TK. Vui lòng xem lại!</small>;
-    }
-};
-const maxvalue = (value) => {
-    if (value.trim().length > 15) {
-        return <small className="form-text text-danger">Số tài khoản không chính xác!</small>;
-    }
-};
-class Login extends Component {
+                axios.post('http://localhost:3001/mail',values).then(() => this.setState({ redirect: true }));
+                const { redirect } = this.state;
 
-    constructor(props){
-        super(props);
-        this.state = {
-            yourname : '',
-            email : '',
-            address : '',
-        };
+                if (redirect) {
+                    return <Redirect to='/'/>;
+                }
 
-    }
+                return <Host/>
+            }}
+        >
+            {({ errors, touched }) => (
 
-    onSubmit(e){
-        e.preventDefault();
-        this.form.validateAll();
+                <Form>
 
-        if ( this.checkBtn.context._errors.length === 0 ) {
-            alert('Check mail để lấy mã xác nhận');
-        }
-    }
-    // if (value) {
-    //     // `format` can be "National" or "International".
-    //     formatPhoneNumber(value, "International")
-    // }
-    render() {
-        const {value}= this.state;
-        return (
-            <div className="container ctnform">
-                <h2 className="text-center">Vui lòng điền đầy đủ và chính xác các thông tin về bạn!</h2>
-                <div className="login-container">
-                    <div id="output"></div>
-                    <div className="avatar"></div>
-                    <div className="form-box">
-                        <Form onSubmit={e => this.onSubmit(e)} ref={c => { this.form = c }}>
-                            <Input
-                                name="yourname"
-                                onChange={this.onChangeHandler}
-                                type="text"
-                                placeholder="Tên đầy đủ"
-                                className="form-control"
-                                validations={[required,minname, maxname]}
-                            />
-                            <Input
-                                name="email"
-                                onChange={this.onChangeHandler}
-                                type="text"
-                                placeholder="Email"
-                                className="form-control"
-                                validations={[required, email]}
-                            />
-                            <PhoneInput
-                                placeholder="Số điện thoại"
-                                value={value }
-                                onChange={ value => this.setState({ value }) }
-                                error={ value ? (isValidPhoneNumber(value) ? undefined : 'Số điện thoại không đúng!') : 'Đây là trường bắt buộc!' }/>
-
-                            {/*Is valid: { value && isValidPhoneNumber(value) ? 'true' : 'false' }*/}
-                            {/*National: { value && formatPhoneNumber(value, 'National') }*/}
-                            {/*International: { value && formatPhoneNumber(value, 'International') }*/}
-
-                            <Input
-                            name="address"
-                            onChange={this.onChangeHandler}
-                            type="text"
-                            placeholder="Địa chỉ"
-                            className="form-control"
-                            validations={[required, minaddress]}
-                        />
-                            <Input
-                                name="atm"
-                                onChange={this.onChangeHandler}
-                                type="text"
-                                placeholder="Số tài khoản"
-                                className="form-control"
-                                validations={[required, minvalue, maxvalue]}
-                            />
-                            <button className="btn btn-info btn-block login" type="submit">Gửi đi</button>
-                            <CheckButton style={{ display: 'none' }} ref={c => { this.checkBtn = c }} />
-                        </Form>
-                    </div>
-                </div>
-            </div>
-        );
-    }
-}
-
-export default Login;
+                    <Field name="fullname" placeholder="Tên"/>
+                    {errors.fullname && touched.fullname ? (
+                        <div>{errors.fullname}</div>
+                    ) : null}
+                    <Field name="address"  placeholder=" Địa chỉ"  />
+                    {errors.address && touched.address ? (
+                        <div>{errors.address}</div>
+                    ) : null}
+                    <Field name="phonenumber"  placeholder=" Số điện thoại"  />
+                    {errors.phonenumber && touched.phonenumber ? (
+                        <div>{errors.phonenumber}</div>
+                    ) : null}
+                    <Field name="email" type="email"  placeholder="Email" />
+                    {errors.email && touched.email ? <div>{errors.email}</div> : null}
+                    <Field name="cre"  placeholder=" Số TK"  />
+                    {errors.cre && touched.cre ? (
+                        <div>{errors.cre}</div>
+                    ) : null}
+                    <button  type="submit">Gửi đi</button>
+                </Form>
+            )}
+        </Formik>
+    </div>
+);
+export default Myform;

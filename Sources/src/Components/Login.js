@@ -1,23 +1,50 @@
-import React, {Component} from 'react';
+import React from 'react';
+import { Formik, Form, Field } from 'formik';
+import * as Yup from 'yup';
+import axios from "axios";
 
-class Login extends Component {
-    render() {
-        return (
-            <div>
-                <form className="form-signin text-center">
-                    <h1 className=" ad">admin login</h1>
-                    <label htmlFor="inputEmail" className="sr-only">Email address</label>
-                    <input type="email" id="inputEmail" className="form-control" placeholder="Email address" required
-                           autoFocus/>
-                    <label htmlFor="inputPassword" className="sr-only">Password</label>
-                    <input type="password" id="inputPassword" className="form-control" placeholder="Password" required/>
-                    <div className="checkbox mb-3">
-                    </div>
-                    <button className="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-                </form>
-            </div>
-        );
-    }
-}
+const SignupSchema = Yup.object().shape({
+    email: Yup.string()
+        .email('Invalid email')
+        .required('Đây là trường bắt buộc!'),
+});
 
+
+const Login = () => (
+    <div>
+        <h3 className="text-center"> Administrator </h3>
+        <Formik
+            initialValues={{
+
+                email: '',
+                password: ''
+            }}
+            validationSchema={SignupSchema}
+
+            onSubmit={(values, { setSubmitting }) => {
+                axios.post('http://localhost:3001/login',values).then(function (result) {
+                    if(values !==0){
+                        window.alert('Insert thành công')
+                    }
+                })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+
+            }}
+        >
+            {({ errors, touched }) => (
+                <Form>
+                    <Field name="email" type="email"  placeholder="Username"/>
+                    {errors.email && touched.email ? <div>{errors.email}</div> : null}
+                    <Field name="password" type="password" placeholder="Mật khẩu"/>
+                    {errors.password && touched.password ? (
+                        <div>{errors.password}</div>
+                    ) : null}
+                    <button type="submit">Gửi đi</button>
+                </Form>
+            )}
+        </Formik>
+    </div>
+);
 export default Login;

@@ -5,7 +5,10 @@
   "dependencies": {
     "axios": "^0.18.0",
     "cors": "^2.8.5",
+    "formik": "^1.4.1",
+    "moment": "^2.23.0",
     "particles.js": "^2.0.0",
+    "query-string": "^6.2.0",
     "react": "^16.6.3",
     "react-credit-card-input": "^1.1.0",
     "react-credit-cards": "^0.7.0",
@@ -15,10 +18,11 @@
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.1",
     "react-validation": "^3.0.7",
-    "validator": "^10.9.0"
+    "validator": "^10.9.0",
+    "yup": "^0.26.6"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "set port=3000 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -26,6 +30,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "proxy": "http://localhost:3000",
   "browserslist": [
     ">0.2%",
     "not dead",

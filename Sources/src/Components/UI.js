@@ -7,7 +7,7 @@ class Ui extends Component {
     render() {
         return (
             <div>
-                <Title tieude="Mô tả" colr="navy" kieucd="fade-down"/>
+                <Title tieude="Đặc tính" colr="navy" kieucd="fade-down"/>
                 <AboutUi/>
                 <Title tieude="Giao diện" colr="orangred" kieucd="fade-up"/>
                 <Topsells/>
